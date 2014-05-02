@@ -2,15 +2,39 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title JS++
+    title Monster Sitting
     link(rel='stylesheet', href='./css/app.css')
+    //- link(rel='stylesheet', href='./css/buttons.css')
   body
-    h1 JS++
+    #head
+      img#logo(src='./media/monster-inc.png');
+      h1 Monster Sitting
+
+    #controls
+      select#gender
+        option Gender
+        option Male
+        option Female
+      select#species
+        option Species
+        option(value='snow-monster.jpg') Monster 1
+        option(value='sulley.jpg') Monster 2
+        option(value='mike.png') Monster 3
+        option(value='randall.png') Monster 4
+      input#name(type='text' placeholder='Name (required)')
+      input#age(type='text' placeholder='Age')
+      //- input#photo(type='text' placeholder='photo url')
+      button#add Add Monster
+
+    #pets
+
 
     script(src='./js/vendor/traceur.js')
     script(src='./js/vendor/experimental.js')
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/vendor/lodash-2.4.1.js')
     script(src='./js/vendor/moment-2.6.0.js')
-    script(src='./js/es5/main.js')
+    //- script(src='./js/vendor/button.js')
+    script(src='./js/es6/database.js')
+    script(src='./js/es6/pet.js')
     script(src='./js/es6/main.js')
