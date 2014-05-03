@@ -4,12 +4,14 @@ html(lang='en')
     meta(charset='utf-8')
     title Monster Sitting
     link(rel='stylesheet', href='./css/app.css')
-    //- link(rel='stylesheet', href='./css/buttons.css')
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet")
+    link(rel='stylesheet', href='./css/buttons.css')
   body
-    #head
-      img#logo(src='./media/monster-inc.png');
-      h1 Monster Sitting
+    header
+      img#logo(src='./media/monsterwallpaper.png')
+      h1 Monster-sitting
 
+    br
     #controls
       select#gender
         option Gender
@@ -24,7 +26,7 @@ html(lang='en')
       input#name(type='text' placeholder='Name (required)')
       input#age(type='text' placeholder='Age')
       //- input#photo(type='text' placeholder='photo url')
-      button#add Add Monster
+      a#add(href="#" class="button glow button-primary") Add Monster
 
     #pets
 
@@ -34,7 +36,7 @@ html(lang='en')
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/vendor/lodash-2.4.1.js')
     script(src='./js/vendor/moment-2.6.0.js')
-    //- script(src='./js/vendor/button.js')
+    script(src='./js/vendor/buttons.js')
     script(src='./js/es6/database.js')
     script(src='./js/es6/pet.js')
     script(src='./js/es6/main.js')

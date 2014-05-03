@@ -22,6 +22,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
 
 h1, {
   text-align: center;
@@ -30,16 +34,39 @@ h1, {
   font-size: 65px;
   margin: 0;
   line-height: 2em;
-  display: inline-block;
+  // display: inline-block;
   vertical-align: middle;
-  float: left
+  float: left;
+}
+
+header {
+	text-align: center;
+	width: 640px;
+	height: 150px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	display: inline-block;
+	text-align: center;
+	margin-left: 15px;
+}
+
+#logo {
+	width: 150px;
+	// margin-left: auto;
+	// margin-right: auto;
+	float: left;
+	text-align: center;
 }
 
 #controls {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  margin-top: 60px;
-  display: block;
+	float: clear;
+	display: block;
 }
 
 body {
@@ -47,28 +74,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
-#head {
-  text-align: center;
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+#add {
+	background-color: #359dac;
+	margin-left: 5px;
 }
 
-h1 {
-  display: inline-block;
+input {
+	padding: 5px 5px;
+	font-size: 11px;
 }
 
-header img {
-  width: 150px;
-  float: left;
-}
-
-
-h3 {
-  text-decoration: underline;
-  text-align: left;
+#gender, #species {
+	padding: 10px 10px !important;
+	font-size: 18px;
 }
 
 #pets {
@@ -97,6 +119,13 @@ h3 {
   width: 230px;
   height: 255px;
   background-size: cover;
+}
+
+.dead {
+	width: 150px;
+	height: 150px;
+	// vertical-align: center;
+	margin-top: 30px;
 }
 
 .text {

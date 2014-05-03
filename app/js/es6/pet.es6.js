@@ -10,7 +10,7 @@ class Pet{
     this.species = species;
     this.speciesImg = `../media/${speciesImg}`;
     this.gender = gender;
-    this.age = age * 2;
+    this.age = age * 1;
     this.name = name;
 
     this.health = _.random(10, 100);
@@ -23,11 +23,11 @@ class Pet{
   }
 
   eat(){
-    this.full += _.random(3, 8); //increasing property full of 'this' by between 3-8px
+    this.full += _.random(3, 6); //increasing property full of 'this' by between 3-8px
     if(this.full >= 100){this.full = 100;} //limiting max amount to 100
     this.health += _.random(-5, 0);
-    if(this.health <= 0){
-      $(`div[data-name=${this.name}]`).find('.photo').css({'background-image': 'url("../media/skull.png")', 'background-size': 'cover'});
+    if(this.health === 0){
+      $(`div[data-name=${this.name}]`).find('.photo').append(`<img class=dead src='../media/dead.png'>`);
     }
   }
 
@@ -35,22 +35,24 @@ class Pet{
     this.health += _.random(2, 6);
     if(this.health >= 100){this.health = 100;}
 
-    this.mood += _.random(-2,2);
-    if(this.mood >= 100){this.mood = 100;}
+    this.mood += _.random(-4, 0);
+    if(this.mood === 0){
+      $(`div[data-name=${this.name}]`).find('.photo').append(`<img class=dead src='../media/dead.png'>`);
+    }
   }
 
   play(){
-    this.mood += _.random(-5,3);
+    this.mood += _.random(0,3);
     if(this.mood >= 100){this.mood = 100;}
 
     this.health += _.random(-2, 5);
-    if(this.health <= 0){
-      $(`div[data-name=${this.name}]`).find('.photo').css({'background-image': 'url("../media/skull.png")', 'background-size': 'cover'});
+    if(this.health === 0){
+      $(`div[data-name=${this.name}]`).find('.photo').append(`<img class=dead src='../media/dead.png'>`);
     } else if(this.health >= 100){this.health = 100;}
 
     this.full += _.random(-5, 0);
-    if(this.full <= 0){
-      $(`div[data-name=${this.name}]`).find('.photo').css({'background-image': 'url("../media/skull.png")', 'background-size': 'cover'});
+    if(this.full === 0){
+      $(`div[data-name=${this.name}]`).find('.photo').append(`<img class=dead src='../media/dead.png'>`);
     }
   }
 
